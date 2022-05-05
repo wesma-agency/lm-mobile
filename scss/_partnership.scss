@@ -1,0 +1,119 @@
+.partnership {
+    &-banner {
+        background: $p 50% 50% no-repeat;
+        background-size: cover;
+        &-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+            color: $w;
+            min-height: 220px;
+            padding: 46px 0 30px;
+        }
+        &-title {
+            flex: 0 0 100%;
+            max-width: 100%;
+            font-size: 15px;
+            line-height: 1.6;
+            font-weight: bold;
+            letter-spacing: -0.31px;
+            h1 {
+                font-size: 100%;
+                font-weight: bold;
+                margin: 0;
+            }
+            strong {
+                display: block;
+                font-size: 25px;
+                line-height: 1.2;
+                font-weight: 900;
+                letter-spacing: -0.16px;
+            }
+        }
+    }
+    &-advantages {
+        padding-top: 21px;
+        text-align: center;
+        &-gray {
+            background: $s;
+            .partnership-advantages-icon {
+                background: $w;
+            }
+        }
+        &-caption {
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: bold;
+            color: $b;
+            margin-bottom: 14px;
+            h2 {
+                font-size: 100%;
+                font-weight: bold;
+                margin: 0;
+            }
+        }
+        &-item {
+            padding: 9px 0 30px;
+        }
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 105px;
+            height: 105px;
+            background: $s;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 16px;
+        }
+        &-title {
+            font-size: 15px;
+            line-height: 1.334;
+            font-weight: bold;
+            color: $b;
+        }
+        &-info {
+            font-size: 13px;
+            line-height: 1.54;
+            color: $text;
+            padding-top: 8px;
+        }
+    }
+    &-form {
+        padding: 30px 0 20px;
+        .caption {
+            margin-bottom: 26px;
+        }
+        &-button {
+            padding-top: 6px;
+            margin-bottom: 16px;
+            .button {
+                width: 100%;
+            }
+        }
+    }
+    &-contacts {
+        padding-bottom: 1px;
+        border-bottom: 1px solid #e1e1e1;
+        text-align: center;
+        &-title {
+            font-size: 15px;
+            line-height: 1.4;
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 24px;
+        }
+        &-item {
+            margin-bottom: 19px;
+            font-size: 13px;
+            line-height: 1.54;
+            a {
+                display: block;
+                font-size: 16px;
+                line-height: 1.375;
+                color: $b;
+            }
+        }
+    }
+}

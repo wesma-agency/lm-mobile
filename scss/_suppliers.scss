@@ -1,0 +1,173 @@
+.suppliers {
+    &-advantages {
+        padding-top: 8px;
+        text-align: center;
+        &-title {
+            font-size: 15px;
+            line-height: 1.334;
+            font-weight: 500;
+            color: $b;
+            letter-spacing: -0.3px;
+            margin-bottom: 24px;
+        }
+        &-item {
+            padding-bottom: 21px;
+            p {
+                margin-bottom: 18px;
+            }
+        }
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 105px;
+            height: 105px;
+            background: $s;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 17px;
+        }
+    }
+    &-info {
+        text-align: center;
+        background: $s;
+        margin: 0 -16px 30px;
+        padding: 31px 24px 29px;
+        p {
+            line-height: 1.54;
+            margin-bottom: 20px;
+        }
+        a {
+            font-weight: 500;
+            line-height: normal;
+        }
+        &-note {
+            font-size: 11px;
+            line-height: 1.82;
+            color: $gray;
+        }
+    }
+    &-requirements {
+        padding: 0 14px 18px;
+        &-title {
+            font-size: 15px;
+            line-height: 1.334;
+            font-weight: 500;
+            color: $b;
+            letter-spacing: -0.3px;
+            margin-bottom: 25px;
+        }
+        &-list {
+            display: block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                position: relative;
+                padding-left: 25px;
+                margin-bottom: 18px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 2px;
+                    top: 7px;
+                    width: 3px;
+                    height: 3px;
+                    background: $text;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    &-form {
+        margin: 0 -16px;
+        padding: 30px 16px;
+        border-top: 1px solid #e1e1e1;
+        &-title {
+            text-align: center;
+            font-size: 15px;
+            line-height: 1.6;
+            font-weight: 900;
+            color: $b;
+            margin-bottom: 18px;
+        }
+        &-checkbox {
+            margin-bottom: 18px;
+            input {
+                appearance: none;
+                position: absolute;
+                left: -9999px;
+                &:checked + label {
+                    &:before {
+                        background-color: $p;
+                        border-color: $p;
+                    }
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+                &:disabled + label {
+                    cursor: default;
+                    pointer-events: none;
+                    opacity: 0.3;
+                }
+            }
+            label {
+                cursor: pointer;
+                display: block;
+                margin: 0;
+                padding-left: 30px;
+                color: $b;
+                position: relative;
+                user-select: none;
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 1px;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 2px;
+                }
+                &:before {
+                    background: $w;
+                    border: 1px solid $t;
+                    transition: background-color $d $f, border-color $d $f;
+                    will-change: background-color, border-color;
+                }
+                &:after {
+                    opacity: 0;
+                    background: $tr url('../upload/check.svg') 50% 50% no-repeat;
+                    background-size: 8px 6px;
+                    transition: opacity $d $f;
+                    will-change: opacity;
+                }
+            }
+            &-list {
+                padding: 7px 0 5px;
+            }
+            &-title {
+                font-weight: 500;
+                color: $b;
+                margin-bottom: 16px;
+            }
+        }
+        &-button {
+            margin-bottom: 16px;
+            .button {
+                width: 100%;
+            }
+        }
+        &-note {
+            text-align: center;
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gray;
+            a {
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
+}

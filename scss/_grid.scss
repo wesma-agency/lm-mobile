@@ -1,0 +1,15 @@
+/* grid */
+.main-global {
+    min-height: 100%;
+    overflow: hidden;
+    max-width: 768px;
+    margin: 0 auto;
+}
+.container {
+    padding: 0 16px;
+}
+.no-js {
+    .navigation {
+        visibility: hidden;
+    }
+}

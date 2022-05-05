@@ -1,0 +1,338 @@
+.catalog {
+    &-nav {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -4px;
+        padding: 0;
+        list-style: none;
+        li {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 4px 8px;
+            a {
+                display: block;
+                padding: 12px 8px;
+                font-size: 11px;
+                line-height: 1.455;
+                font-weight: bold;
+                color: $b;
+                text-align: center;
+                background: $s;
+            }
+        }
+        &-filter {}
+        &-number {
+            display: inline-block;
+            vertical-align: top;
+            min-width: 16px;
+            height: 16px;
+            white-space: nowrap;
+            padding: 4px 3px 3px;
+            font-size: 9px;
+            line-height: 1;
+            font-weight: 500;
+            color: #ffffff;
+            text-align: center;
+            background: $p;
+            border-radius: 50%;
+        }
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -4px;
+    }
+    &-product {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 4px 16px;
+        position: relative;
+        &-link {
+            display: block;
+            text-align: center;
+        }
+        &-img {
+            display: block;
+            margin-bottom: 8px;
+            img {
+                width: 100%;
+            }
+        }
+        &-title {
+            display: block;
+            font-size: 11px;
+            line-height: 1.455;
+            color: $text;
+            margin-bottom: 6px;
+        }
+        &-price {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            line-height: 1.231;
+            font-weight: 500;
+            color: $b;
+            &-old {
+                display: inline-block;
+                vertical-align: top;
+                white-space: nowrap;
+                font-size: 11px;
+                line-height: 1.455;
+                color: $t;
+                text-decoration: line-through;
+            }
+            &-new {
+                display: inline-block;
+                vertical-align: top;
+                white-space: nowrap;
+                color: $red;
+            }
+        }
+        &-colors {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin: 0 0 8px -4px;
+            &-more {
+                flex: 0 0 25%;
+                max-width: 25%;
+                padding-left: 4px;
+                font-size: 11px;
+                line-height: 1.455;
+                font-weight: 500;
+                color: $gray;
+                text-align: center;
+            }
+        }
+        &-color {
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding-left: 4px;
+            img {
+                width: 100%;
+            }
+        }
+        &-info {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+            margin: 0 -3px;
+            overflow: hidden;
+        }
+        &-rating {
+            padding: 0 3px 6px;
+            font-size: 11px;
+            line-height: 1.182;
+            color: $p;
+            font-weight: 500;
+            white-space: nowrap;
+            img {
+                display: inline-block;
+                vertical-align: top;
+                margin: 1px 3px 0 0;
+            }
+        }
+        &-reviews {
+            padding: 0 3px 6px;
+            font-size: 11px;
+            line-height: 1.182;
+            color: $t;
+            white-space: nowrap;
+        }
+        &-favorite {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 8px;
+            right: 12px;
+            width: 24px;
+            height: 24px;
+            background: $w;
+            border-radius: 50%;
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 13px;
+                height: 12px;
+                margin-top: -5px;
+                margin-left: -6px;
+                background: $tr url('../upload/favorite.svg') 50% 50% no-repeat;
+                background-size: 100% 100%;
+                transition: opacity $d $f;
+                will-change: opacity;
+            }
+            &:after {
+                opacity: 0;
+                background-image: url('../upload/favorite-active.svg');
+            }
+            &.active {
+                &:before {
+                    opacity: 0;
+                }
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &-banner {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 4px 16px;
+        &-link {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 33.33333%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+            }
+            img {
+                width: 100%;
+            }
+        }
+        &-caption {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0 10px 14px;
+        }
+        &-play {
+            flex: 0 0 24px;
+            max-width: 24px;
+            padding-right: 8px;
+            padding-top: 1px;
+            align-self: flex-start;
+            &-icon {
+                display: block;
+                position: relative;
+                width: 16px;
+                height: 16px;
+                background: $w;
+                border-radius: 50%;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 5px;
+                    height: 6px;
+                    background: $tr url('../upload/play.svg') 50% 50% no-repeat;
+                    background-size: 100% 100%;
+                    transform: translate3d(-50%, -50%, 0);
+                }
+            }
+        }
+        &-title {
+            flex-grow: 1;
+            font-size: 11px;
+            line-height: 1.273;
+            font-weight: bold;
+            color: $w;
+        }
+    }
+    &-more {
+        margin-bottom: 16px;
+        .button {
+            width: 100%;
+        }
+    }
+    &-pagination {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        &-total {
+            flex-grow: 1;
+            text-align: center;
+        }
+        &-next,
+        &-prev {
+            display: block;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: $tr url('../upload/arrow-down.svg') 50% 50% no-repeat;
+                background-size: 12px 8px;
+                transform: rotate(-90deg);
+            }
+        }
+        &-prev {
+            &:before {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+.brand {
+    margin: 8px -16px 16px;
+    padding: 30px 16px 21px;
+    text-align: center;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    &-logo {
+        margin-bottom: 22px;
+        a {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+    &-info {
+        padding-bottom: 16px;
+        line-height: 1.54;
+        strong {
+            color: $b;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    &-feature {
+        line-height: 1.85;
+        font-weight: 500;
+        color: $b;
+        a {
+            display: inline-block;
+            vertical-align: top;
+            color: $b;
+        }
+        p {
+            margin-bottom: 25px;
+        }
+    }
+    &-number {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 4px;
+        min-width: 24px;
+        height: 24px;
+        padding: 4px 4px 2px;
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: bold;
+        color: $w;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        background: $p;
+        border-radius: 50%;
+    }
+}

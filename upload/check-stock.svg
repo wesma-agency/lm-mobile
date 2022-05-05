@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons-/-check-stock" fill-rule="nonzero">
+            <g id="icons/ic_hint">
+                <g>
+                    <g id="Group">
+                        <path d="M6.5,0 C10.0898509,0 13,2.91014913 13,6.5 C13,10.0898509 10.0898509,13 6.5,13 C2.91014913,13 0,10.0898509 0,6.5 C0,2.91014913 2.91014913,0 6.5,0 Z" id="Combined-Shape" fill="#F3B800"></path>
+                        <path d="M7.00296296,7 L7.54,3.72033898 L7.54,3 L5.54,3 L5.54,3.72033898 L6.07703704,7 L7.00296296,7 Z M7.54,10 L7.54,8 L5.54,8 L5.54,10 L7.54,10 Z" id="!" fill="#000000"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

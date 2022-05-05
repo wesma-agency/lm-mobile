@@ -1,0 +1,122 @@
+.contacts {
+    &-city {
+        margin-bottom: 16px;
+    }
+    &-metro {
+        padding-bottom: 16px;
+        .radio {
+            margin-bottom: 8px;
+        }
+    }
+    &-phone {
+        text-align: center;
+        p {
+            margin-bottom: 24px;
+        }
+        a {
+            display: block;
+            color: $b;
+            font-weight: 500;
+            &.contacts-phone-link {
+                margin-top: -8px;
+                color: $p;
+            }
+        }
+    }
+    &-note {
+        display: block;
+        font-size: 11px;
+        line-height: 1.82;
+        color: $gr;
+    }
+    &-address {
+        text-align: center;
+        margin: 0 -16px;
+        padding: 24px 16px;
+        border-top: 1px solid #e1e1e1;
+        h3 {
+            font-size: 100%;
+            font-weight: 500;
+            color: $b;
+            margin: 0 0 18px;
+        }
+        p {
+            margin-bottom: 21px;
+        }
+        &-link {
+            a {
+                display: block;
+                font-weight: 500;
+                color: $p;
+                padding: 11px 0;
+            }
+        }
+        &-icon {
+            display: inline-block;
+            vertical-align: top;
+            margin: 2px 12px 0;
+        }
+    }
+    &-info {
+        margin: 0 -16px;
+        padding: 30px 35px 20px;
+        background-color: rgba(243, 184, 0, 0.1);
+        font-size: 11px;
+        line-height: 1.455;
+        color: $gr;
+        text-align: center;
+        a {
+            font-weight: 500;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+    }
+    &-map {
+        height: 320px;
+        &-block {
+            margin: 0 -16px 30px;
+        }
+    }
+    &-features {
+        padding: 0 10px;
+        &-caption {
+            padding: 0 0 21px;
+            text-align: center;
+            h3 {
+                font-size: 100%;
+                font-weight: 500;
+                color: $b;
+                margin: 0 0 17px;
+            }
+            p {
+                margin-bottom: 18px;
+            }
+        }
+    }
+    &-feature {
+        text-align: center;
+        padding: 0 0 23px;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 105px;
+            height: 105px;
+            margin: 0 auto 25px;
+            background: $s;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-title {
+            font-size: 15px;
+            line-height: 1.3334;
+            font-weight: 900;
+            color: $b;
+            margin-bottom: 4px;
+        }
+        &-info {
+            margin-bottom: 16px;
+        }
+    }
+}

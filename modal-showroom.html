@@ -1,0 +1,44 @@
+<div class="modal-content">
+    <div class="modal-title">Шоурум на карте</div>
+    <div class="modal-showroom">
+        <div class="modal-showroom-map-block">
+            <div id="modal-showroom-map" class="modal-showroom-map"></div>
+            <script>
+                ymaps.ready(function () {
+                    var myMap = new ymaps.Map('modal-showroom-map', {
+                            center: [55.751131, 37.637388],
+                            zoom: 16,
+                            controls: []
+                        }, {
+                            searchControlProvider: 'yandex#search'
+                        }),
+
+                        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                        }, {
+                            iconLayout: 'default#image',
+                            iconImageHref: 'upload/pin.svg',
+                            iconImageSize: [44, 44],
+                            iconImageOffset: [-22, -18]
+                        });
+
+                    myMap.geoObjects.add(myPlacemark);
+                });
+            </script>
+        </div>
+        <!-- /.modal-showroom-map-block -->
+        <div class="modal-showroom-route">
+            <div class="modal-showroom-route-title">Метро Верхние Лихоборы</div>
+            <ul>
+                <li>Первый вагон из центра, выход 1</li>
+                <li>Дмитровское шоссе, 73, стр. 1</li>
+                <li>ТЦ MetroMall</li>
+                <li>минус первый этаж</li>
+            </ul>
+            <div class="modal-showroom-route-title">Как найти?</div>
+            <p>Пройдите через главный вход в ТЦ Метромолл насквозь, после выхода во внутренний двор идите прямо, с левой стороны будет спуск по лестнице вниз. Пройдите через стеклянные двери и идите прямо. Все, вы на месте!</p>
+        </div>
+        <!-- /.modal-showroom-route -->
+    </div>
+    <!-- /.modal-showroom -->
+</div>
+<!-- /.modal-content -->

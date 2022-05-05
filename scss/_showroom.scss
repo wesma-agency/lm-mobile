@@ -1,0 +1,169 @@
+.showroom {
+    &-metro {
+        padding: 16px 0 8px;
+        .radio {
+            margin-bottom: 8px;
+        }
+    }
+    &-thumbs {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -16px 30px;
+    }
+    &-thumb {
+        flex: 0 0 50%;
+        max-width: 50%;
+        &-link {
+            display: block;
+            overflow: hidden;
+            height: 0;
+            padding-top: 100%;
+            position: relative;
+            background: $s;
+        }
+        &-img {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            img {
+                width: 100%;
+            }
+        }
+        &-caption {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            top: 0;
+            padding: 24px 16px 0 24px;
+        }
+        &-title {
+            display: block;
+            font-size: 13px;
+            line-height: 1.231;
+            font-weight: 500;
+            color: $b;
+        }
+        &-v1 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            .showroom-thumb-link {
+                padding-top: 50%;
+            }
+            .showroom-thumb-caption {
+                padding: 31px 24px 0 32px;
+            }
+            .showroom-thumb-title {
+                font-size: 18px;
+                line-height: 1.2223;
+                font-weight: 900;
+            }
+        }
+        &-v2 {
+            .showroom-thumb-title {
+                color: $w;
+            }
+        }
+        &-v3 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            .showroom-thumb-caption {
+                padding: 31px 24px 0 32px;
+            }
+            .showroom-thumb-title {
+                font-size: 18px;
+                line-height: 1.2223;
+                font-weight: 900;
+            }
+        }
+    }
+    &-map {
+        height: 210px;
+        &-block {
+            margin: 0 -16px;
+        }
+    }
+    &-route {
+        margin: 0 -16px 30px;
+        padding: 20px 16px 26px;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        &-title {
+            padding: 0 0 14px 8px;
+            font-size: 15px;
+            line-height: 1.3334;
+            font-weight: 500;
+            color: $b;
+            letter-spacing: -0.3px;
+            h3, h4, h5 {
+                font-size: 100%;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+        ul {
+            display: block;
+            padding: 0 0 5px 24px;
+            margin: 0;
+            list-style: disc outside;
+            li {
+                padding: 0 0 18px 9px;
+            }
+        }
+        .button {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+    &-feature {
+        text-align: center;
+        padding: 16px 10px 0;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 125px;
+            height: 125px;
+            margin: 0 auto 21px;
+            background: $s;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-title {
+            font-size: 15px;
+            line-height: 1.3334;
+            font-weight: 500;
+            color: $b;
+            letter-spacing: -0.3px;
+            margin-bottom: 9px;
+        }
+        &-info {
+            margin-bottom: 13px;
+            strong {
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+        &-phone {
+            color: $text;
+            white-space: nowrap;
+        }
+    }
+    &-features {
+        padding: 30px 0 7px;
+        .showroom-feature {
+            padding-bottom: 10px;
+        }
+    }
+    &-assortment {
+        text-align: center;
+        padding-bottom: 14px;
+        &-info {
+            max-width: 250px;
+            margin: 0 auto 15px;
+        }
+    }
+}

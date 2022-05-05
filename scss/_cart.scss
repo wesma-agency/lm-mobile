@@ -1,0 +1,744 @@
+.main-global-cart {
+    background: $s;
+    .header-global {
+        background-color: $w;
+        position: relative;
+    }
+    .cart {
+        background: $w;
+    }
+}
+.cart {
+    padding-bottom: 10px;
+    &-empty {
+        padding: 80px 0 56px;
+        border-bottom: 1px solid #e1e1e1;
+        margin-bottom: 15px;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 23px;
+            width: 105px;
+            height: 105px;
+            background: $s;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-title {
+            margin-bottom: 24px;
+            font-size: 15px;
+            line-height: 1.3334;
+            font-weight: 900;
+            color: $b;
+            text-align: center;
+            h1 {
+                font-size: 100%;
+                font-weight: 900;
+                margin: 0;
+            }
+        }
+    }
+    &-success {
+        text-align: center;
+        &-content {
+            padding: 80px 0 72px;
+        }
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 23px;
+            width: 105px;
+            height: 105px;
+            background: $s;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-title {
+            margin-bottom: 8px;
+            font-size: 15px;
+            line-height: 1.3334;
+            font-weight: 900;
+            color: $b;
+            text-align: center;
+            h1 {
+                font-size: 100%;
+                font-weight: 900;
+                margin: 0;
+            }
+        }
+        &-info {
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gr;
+            p {
+                margin-bottom: 8px;
+            }
+        }
+        &-order {
+            line-height: 1.231;
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 8px;
+        }
+        &-shop {
+            margin-bottom: 30px;
+            .button {
+                width: 100%;
+            }
+        }
+    }
+    &-caption {
+        text-align: center;
+        margin: 0 -16px;
+        padding: 16px;
+        border-bottom: 1px solid #e3e3e3;
+        .caption {
+            margin-bottom: 0;
+        }
+        p {
+            padding-top: 3px;
+            margin-bottom: 3px;
+            strong {
+                font-weight: 500;
+            }
+        }
+    }
+    &-products {}
+    &-product-wrapper {
+        border-bottom: 1px solid #e3e3e3;
+        .swiper-slide {
+            width: 100%;
+            &:nth-child(2) {
+                width: 83px;
+            }
+        }
+    }
+    &-product {
+        display: flex;
+        padding: 16px 16px 0;
+        &-info {
+            flex: 0 0 43.75%;
+            max-width: 43.75%;
+            padding-right: 16px;
+        }
+        &-img {
+            margin-bottom: 16px;
+            a {
+                display: block;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        &-number {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        &-number-minus,
+        &-number-plus {
+            display: block;
+            width: 28px;
+            height: 28px;
+            border-radius: 3px;
+            background: $s;
+            position: relative;
+            transition: background-color $d $f;
+            will-change: background-color;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 13px;
+                left: 9px;
+                width: 10px;
+                height: 2px;
+                background: $t;
+                transition: background-color $d $f;
+                will-change: background-color;
+            }
+            &:hover {
+                background-color: $p;
+                &:before,
+                &:after {
+                    background-color: $w;
+                }
+            }
+        }
+        &-number-plus {
+            &:after {
+                content: "";
+                position: absolute;
+                top: 9px;
+                left: 13px;
+                width: 2px;
+                height: 10px;
+                background: $t;
+                transition: background-color $d $f;
+                will-change: background-color;
+            }
+        }
+        &-number-text {
+            display: block;
+            width: 38px;
+            height: 28px;
+            font-size: 13px;
+            line-height: normal;
+            color: $b;
+            font-weight: 500;
+            text-align: center;
+            padding: 4px 4px 6px;
+            background: $tr;
+            border: 0;
+            border-radius: 0;
+        }
+        &-number-final {
+            margin-top: -5px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 1.154;
+            color: $b;
+        }
+        &-content {
+            flex: 0 0 56.25%;
+            max-width: 56.25%;
+        }
+        &-title {
+            font-size: 13px;
+            line-height: 1.231;
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 2px;
+            a {
+                color: $b;
+            }
+        }
+        &-articul {
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gr;
+            margin-bottom: 13px;
+        }
+        &-price {
+            font-size: 13px;
+            line-height: 1.231;
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 22px;
+            &-old {
+                display: inline-block;
+                vertical-align: top;
+                white-space: nowrap;
+                font-size: 11px;
+                line-height: 1.455;
+                color: $t;
+                text-decoration: line-through;
+            }
+            &-new {
+                display: inline-block;
+                vertical-align: top;
+                white-space: nowrap;
+                color: $red;
+            }
+        }
+        &-assembly {
+            margin-bottom: 16px;
+            input {
+                appearance: none;
+                position: absolute;
+                left: -9999px;
+                &:checked + label {
+                    &:before {
+                        background-color: $p;
+                        border-color: $p;
+                    }
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+                &:disabled + label {
+                    cursor: default;
+                    pointer-events: none;
+                    opacity: 0.3;
+                }
+            }
+            label {
+                cursor: pointer;
+                display: block;
+                margin: 0;
+                padding-left: 24px;
+                font-size: 11px;
+                line-height: 1.455;
+                position: relative;
+                user-select: none;
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 2px;
+                }
+                &:before {
+                    background: $w;
+                    border: 1px solid $t;
+                    transition: background-color $d $f, border-color $d $f;
+                    will-change: background-color, border-color;
+                }
+                &:after {
+                    opacity: 0;
+                    background: $tr url('../upload/check.svg') 50% 50% no-repeat;
+                    background-size: 8px 6px;
+                    transition: opacity $d $f;
+                    will-change: opacity;
+                }
+                strong {
+                    font-weight: 500;
+                }
+            }
+        }
+        &-assembly-final {
+            margin-top: -6px;
+            margin-bottom: 15px;
+            font-size: 11px;
+            line-height: 1.455;
+            strong {
+                font-weight: 500;
+            }
+        }
+        &-delete {
+            display: block;
+            margin: 24px 24px 24px auto;
+            width: 40px;
+            height: 40px;
+            background: $s url('../upload/delete.svg') 50% 50% no-repeat;
+            background-size: 16px 18px;
+            border-radius: 50%;
+        }
+    }
+    &-total {
+        margin-top: -1px;
+        position: relative;
+        z-index: 2;
+        padding: 16px 0 8px;
+        background: $s;
+        .caption {
+            text-align: left;
+            margin-bottom: 9px;
+        }
+        &-info {
+            margin-bottom: 15px;
+        }
+        &-item {
+            display: flex;
+            padding: 3px 0 4px;
+        }
+        &-title {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        &-price {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding-left: 10px;
+            text-align: right;
+            font-weight: 500;
+            color: $b;
+            &.red {
+                color: $default;
+            }
+            &.green {
+                color: $p;
+            }
+        }
+        &-sum {
+            margin: 0 -16px;
+            padding: 16px 16px 8px;
+            border-top: 1px solid #e3e3e3;
+            .cart-total-title {
+                font-weight: 500;
+                color: $b;
+            }
+        }
+    }
+    &-button {
+        padding: 16px 16px 30px;
+        &-delivery {
+            display: block;
+            margin-bottom: -12px;
+            font-weight: 500;
+            text-align: center;
+            padding: 12px 0;
+            span {
+                display: inline-block;
+                vertical-align: top;
+                padding-right: 18px;
+                position: relative;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 7px;
+                    right: 0;
+                    width: 11px;
+                    height: 7px;
+                    background: $tr url('../upload/arrow-down-green.svg') 50% 50% no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+        .button {
+            width: 100%;
+        }
+    }
+    &-checkout {
+        padding-top: 18px;
+    }
+    &-terms {
+        padding-top: 13px;
+        font-size: 11px;
+        line-height: 1.455;
+        color: $gr;
+        text-align: center;
+        p {
+            margin-bottom: 0;
+        }
+        a {
+            font-weight: 500;
+        }
+    }
+    &-delivery {
+        padding-top: 11px;
+        &-caption {
+            font-weight: 500;
+            color: $b;
+            text-align: center;
+            margin-bottom: 20px;
+            h2, h3, h4 {
+                font-size: 100%;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+        &-type {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -4px 8px;
+            &-item {
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding: 0 4px 8px;
+            }
+        }
+        &-cost {
+            padding-bottom: 14px;
+            &-button {
+                margin-bottom: 16px;
+                .button {
+                    width: 100%;
+                }
+            }
+            &-sum {
+                margin-bottom: 16px;
+                text-align: center;
+                font-size: 15px;
+                line-height: 1.2;
+                font-weight: 500;
+                color: $b;
+            }
+        }
+        &-date {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 11px;
+                left: 11px;
+                width: 18px;
+                height: 17px;
+                background: $tr url('../upload/datepicker.svg') 50% 50% no-repeat;
+                background-size: 100% 100%;
+            }
+            input.input-text {
+                cursor: default;
+                padding-right: 30px;
+                padding-left: 39px;
+                background: $w url('../upload/select.svg') 100% 50% no-repeat;
+                background-size: 25px 38px;
+            }
+        }
+        &-time {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 11px;
+                left: 11px;
+                width: 18px;
+                height: 18px;
+                background: $tr url('../upload/time.svg') 50% 50% no-repeat;
+                background-size: 100% 100%;
+            }
+            select.select {
+                padding-left: 39px;
+            }
+        }
+        &-comment {
+            textarea.textarea {
+                height: 100px;
+            }
+        }
+    }
+    &-map {
+        height: 320px;
+        &-block {}
+        &-show {
+            display: block;
+            margin: -10px 0 16px;
+            padding: 10px 0 12px 29px;
+            font-weight: 500;
+            letter-spacing: -0.24px;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 1px;
+                width: 16px;
+                height: 20px;
+                background: $tr url('../upload/map.svg') 50% 50% no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+        &-wrapper {
+            position: relative;
+            margin: -2px -16px 16px;
+        }
+        &-hide {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 16px;
+            right: 16px;
+            width: 24px;
+            height: 24px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+            background: $w url('../upload/close-gray.svg') 50% 50% no-repeat;
+            background-size: 100% 100%;
+            border-radius: 50%;
+        }
+    }
+    &-payment {
+        margin: 0 -16px;
+        padding: 11px 16px 0;
+        border-bottom: 1px solid #e3e3e3;
+        &-caption {
+            font-weight: 500;
+            color: $b;
+            text-align: center;
+            margin-bottom: 15px;
+            h2, h3, h4 {
+                font-size: 100%;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+        &-type {
+            padding-bottom: 8px;
+            .radio {
+                margin-bottom: 8px;
+            }
+        }
+    }
+    &-promo-code {
+        padding: 16px 0 17px;
+        .hint {
+            margin: 2px 0;
+        }
+        .button {
+            width: 100%;
+        }
+    }
+}
+.ui-datepicker {
+    display: none;
+    z-index: 2000 !important;
+    width: 288px;
+    padding: 16px;
+    background: $w;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+}
+.ui-datepicker-header {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    margin-bottom: 8px;
+}
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: -5px;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    line-height: 0;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -10px;
+        margin-left: -6px;
+        width: 12px;
+        height: 20px;
+        background: $tr url('../upload/arrow-right.svg') 50% 50% no-repeat;
+        background-size: 100% 100%;
+        transition: opacity $d $f;
+        will-change: opacity;
+    }
+    &.ui-state-disabled {
+        cursor: default;
+        &:after {
+            opacity: 0.3;
+        }
+    }
+}
+.ui-datepicker-prev {
+    right: auto;
+    left: -5px;
+    &:after {
+        transform: rotate(-180deg);
+    }
+}
+.ui-datepicker-prev span,
+.ui-datepicker-next span {
+    display: none;
+}
+.ui-datepicker-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: $b;
+}
+.ui-datepicker-calendar {
+    width: 100%;
+    table-layout: fixed;
+}
+.ui-datepicker-calendar th {
+    text-align: center;
+    font-weight: 500;
+    padding: 5px 3px 7px;
+    span {
+        cursor: default;
+    }
+}
+.ui-datepicker-calendar td {
+    text-align: center;
+    padding: 3px;
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: 500;
+    span {
+        color: $lgr;
+        cursor: default;
+    }
+    &.ui-datepicker-other-month {
+        a {
+            color: $t;
+        }
+    }
+    a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 0 auto;
+        color: $b;
+        transition: color $d $f, background-color $d $f;
+        will-change: color, background-color;
+        &:hover {
+            color: $p;
+        }
+        &.ui-state-active {
+            color: $w;
+            background-color: $p;
+            border-radius: 50%;
+            cursor: default;
+        }
+    }
+}
+
+.payment {
+    &-intro {
+        padding: 15px 0 10px;
+        font-size: 11px;
+        line-height: 1.455;
+        color: $gray;
+        text-align: center;
+        p {
+            margin-bottom: 16px;
+        }
+    }
+    &-info {
+        margin-bottom: 10px;
+        &-note {
+            padding-top: 8px;
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gray;
+        }
+        &-text {
+            font-size: 13px;
+            line-height: 1.93;
+            p {
+                margin: 0;
+            }
+        }
+    }
+    &-cta {
+        padding: 15px 0;
+        .button {
+            width: 100%;
+        }
+    }
+    &-order {
+        padding-bottom: 12px;
+        &-caption {
+            margin-bottom: 17px;
+            font-size: 13px;
+            line-height: 1.93;
+            text-align: center;
+            .caption {
+                margin-bottom: 0;
+            }
+            p {
+                margin: 0;
+            }
+            strong {
+                font-weight: 500;
+            }
+        }
+        &-products {
+            margin: 0 -16px;
+            .cart-product {
+                border-top: 1px solid #e3e3e3;
+                &-price {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    &-total {
+        margin-bottom: -10px;
+        padding-bottom: 33px;
+    }
+}

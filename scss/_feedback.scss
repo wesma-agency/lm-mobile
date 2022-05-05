@@ -1,0 +1,113 @@
+.feedback {
+    &-menu {
+        display: flex;
+        margin: 0 -16px;
+        padding: 0 1px 16px;
+        list-style: none;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-scrollbar-track {
+            background: $tr;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $tr;
+            outline: none;
+        }
+        &::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        &::-webkit-scrollbar-corner {
+            background: $tr;
+        }
+        li {
+            padding: 0 15px;
+            a {
+                display: block;
+                padding: 6px 0 4px;
+                line-height: 1.154;
+                color: $gr;
+                white-space: nowrap;
+                border-bottom: 2px solid $tr;
+                transition: color $d $f, border-color $d $f;
+                will-change: color, border-color;
+                strong {
+                    font-weight: 500;
+                    color: $b;
+                    transition: color $d $f;
+                    will-change: color;
+                }
+            }
+            &.active {
+                a {
+                    color: $b;
+                    font-weight: 500;
+                    border-bottom-color: $p;
+                    strong {
+                        color: $p;
+                    }
+                }
+            }
+        }
+    }
+    .product-reviews {
+        padding-bottom: 16px;
+        &-more {
+            padding-bottom: 0;
+        }
+    }
+    &-all {
+        padding: 29px 0 9px;
+        border-top: 1px solid #e1e1e1;
+        &-title {
+            font-size: 13px;
+            font-weight: 500;
+            color: $b;
+            text-align: center;
+            margin-bottom: 24px;
+            h3, h4, h5, h6 {
+                font-size: 100%;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            max-width: 288px;
+            margin: 0 auto 20px;
+        }
+        &-rating {
+            flex-shrink: 0;
+            padding-right: 28px;
+        }
+        &-rating-list {
+            display: flex;
+            padding: 0;
+            margin: 0 0 1px -4px;
+            list-style: none;
+            li {
+                padding: 0 0 0 4px;
+            }
+        }
+        &-percent {
+            flex: 0 0 48px;
+            max-width: 48px;
+            padding: 0 10px 2px 0;
+            white-space: nowrap;
+            line-height: 1.231;
+            font-weight: 500;
+            color: $b;
+        }
+        &-number {
+            flex-grow: 1;
+        }
+    }
+}

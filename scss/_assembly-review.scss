@@ -1,0 +1,73 @@
+.assembly-review {
+    padding-bottom: 15px;
+    &-intro {
+        padding: 11px 0 25px;
+        text-align: center;
+        p {
+            margin-bottom: 16px;
+        }
+    }
+    &-question {
+        margin-bottom: 9px;
+    }
+    &-row {
+        display: flex;
+        margin: 0 -4px 25px;
+        .radio {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 4px;
+        }
+    }
+    &-form {
+        &-button {
+            padding-top: 7px;
+            margin-bottom: 15px;
+            .button {
+                width: 100%;
+            }
+        }
+        &-note {
+            margin-bottom: 16px;
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gr;
+            text-align: center;
+            a {
+                font-weight: 500;
+            }
+        }
+    }
+    &-thanks {
+        padding: 80px 0;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            width: 105px;
+            height: 105px;
+            background: $s;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-title {
+            font-size: 15px;
+            line-height: 1.3334;
+            font-weight: 900;
+            color: $b;
+            text-align: center;
+            h1 {
+                font-size: 100%;
+                font-weight: 900;
+                margin: 0;
+            }
+        }
+    }
+    &-shop {
+        margin-bottom: 25px;
+        .button {
+            width: 100%;
+        }
+    }
+}

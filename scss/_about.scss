@@ -1,0 +1,54 @@
+.about {
+    &-info {
+        padding: 9px 8px 7px;
+        line-height: 1.54;
+        text-align: center;
+        p {
+            margin-bottom: 16px;
+        }
+    }
+    &-features {
+        padding: 32px 0 8px;
+    }
+    &-feature {
+        padding: 8px 8px 32px;
+        text-align: center;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 125px;
+            height: 125px;
+            margin: 0 auto 21px;
+            background: $s;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-title {
+            font-size: 15px;
+            line-height: 1.3334;
+            font-weight: 500;
+            color: $b;
+            letter-spacing: -0.3px;
+            margin-bottom: 9px;
+        }
+        &-info {
+            margin-bottom: 7px;
+        }
+        .button {
+            width: 100%;
+        }
+        &-links {
+            margin: 0 -11px;
+            padding-top: 2px;
+            font-size: 0;
+            line-height: 0;
+            .button {
+                margin: 6px 3px 0;
+                width: auto;
+                padding-left: 26px;
+                padding-right: 26px;
+            }
+        }
+    }
+}

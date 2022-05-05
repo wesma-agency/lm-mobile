@@ -1,0 +1,393 @@
+/* forms */
+.error {
+    color: $error !important;
+    border-color: rgba(243, 0, 0, 0.5) !important;
+}
+.success {
+    color: $success !important;
+    border-color: $success !important;
+}
+.disabled {
+    color: $t !important;
+    border-color: $s !important;
+    cursor: default !important;
+    pointer-events: none;
+}
+.input-wrapper {
+    margin-bottom: 18px;
+    & > label {
+        display: block;
+        color: $text;
+        margin: 0 0 8px;
+        .hint {
+            margin: 2px 0;
+        }
+    }
+    &.error {
+        .input-error {
+            display: block;
+        }
+        input.input-text,
+        textarea.textarea,
+        select.select {
+            color: $red;
+            border-color: rgba(243, 0, 0, 0.5);
+        }
+    }
+}
+.input-error {
+    display: none;
+    font-size: 11px;
+    line-height: 1.273;
+    font-weight: 500;
+    color: $red;
+    padding-top: 5px;
+    margin-bottom: -1px;
+}
+.input-note {
+    font-size: 11px;
+    line-height: 1.273;
+    color: $gr;
+    padding-top: 8px;
+}
+input.input-text,
+textarea.textarea {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+    line-height: normal;
+    color: $b;
+    padding: 11px 15px;
+    border: 1px solid $t;
+    border-radius: 2px;
+    background: $w;
+    &::placeholder {
+        color: $t;
+    }
+}
+textarea.textarea {
+    font-family: $fontFamily;
+    height: 130px;
+    resize: none;
+}
+select.select {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+    line-height: 1.54;
+    color: $b;
+    padding: 0 30px 0 15px;
+    border: 1px solid $t;
+    border-radius: 2px;
+    background: $w url('../upload/select.svg') 100% 50% no-repeat;
+    background-size: 25px 38px;
+    appearance: none;
+}
+select.select::-ms-expand {
+    display: none;
+}
+.checkbox,
+.radio {
+    display: block;
+    input {
+        appearance: none;
+        position: absolute;
+        left: -9999px;
+        &:checked + label {
+            border-color: $t;
+            background-color: $w;
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+            &:before {
+                border-color: $p;
+                background-color: $p;
+            }
+            &:after {
+                opacity: 1;
+            }
+        }
+        &:disabled + label {
+            cursor: default;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+    }
+    label {
+        cursor: pointer;
+        display: block;
+        margin: 0;
+        padding: 14px 14px 12px 40px;
+        position: relative;
+        user-select: none;
+        border: 2px solid $tr;
+        border-radius: 5px;
+        background: $s;
+        transition: border-color $d $f, background-color $d $f, box-shadow $d $f;
+        will-change: border-color, background-color, box-shadow;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -8px;
+            left: 14px;
+            width: 16px;
+            height: 16px;
+            border: 1px solid $t;
+            background: $w;
+            border-radius: 50%;
+            transition: border-color $d $f, background-color $d $f;
+            will-change: border-color, background-color;
+        }
+        &:after {
+            opacity: 0;
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -3px;
+            left: 19px;
+            width: 6px;
+            height: 6px;
+            background: $w;
+            border-radius: 50%;
+            transition: opacity $d $f;
+            will-change: opacity;
+        }
+    }
+}
+.checkbox {}
+a.button,
+input.button,
+button.button {
+    display: inline-block;
+    vertical-align: top;
+    padding: 12px 16px 13px;
+    font-size: 13px;
+    line-height: normal;
+    font-weight: 500;
+    color: $w;
+    text-align: center;
+    border: 0;
+    background: $p;
+    border-radius: 3px;
+    &.secondary {
+        color: $b;
+        background: $s;
+    }
+    &.orange {
+        background: #ffa22a;
+    }
+    &.white {
+        color: $p;
+        background: $w;
+    }
+    &.red {
+        background: $red;
+    }
+}
+button.button {
+    &:focus {
+        outline: none;
+    }
+}
+.drop-panel {
+    position: absolute;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity $d $f, visibility $d $f;
+    will-change: opacity, visibility;
+}
+.drop-opened {
+   .drop-panel {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+   }
+}
+.fade {
+    transition: opacity $d linear;
+}
+.fade:not(.show) {
+    opacity: 0;
+}
+.popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6000;
+    display: block;
+    max-width: 278px;
+    margin: 7px;
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: $w;
+    text-align: center;
+    word-break: normal;
+    line-break: auto;
+    word-wrap: break-word;
+    background: rgba($dgr, 0.9);
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    .arrow {
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 10px;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border: 5px solid $tr;
+        }
+    }
+}
+.bs-popover-top {
+    .arrow {
+        bottom: -10px;
+        &::after {
+            border-top-color: rgba($dgr, 0.9);
+        }
+    }
+}
+.bs-popover-bottom {
+    .arrow {
+        top: -10px;
+        &::after {
+            border-bottom-color: rgba($dgr, 0.9);
+        }
+    }
+}
+.bs-popover-right {
+    .arrow {
+        left: -10px;
+        &::after {
+            border-right-color: rgba($dgr, 0.9);
+        }
+    }
+}
+.bs-popover-left {
+    .arrow {
+        right: -10px;
+        &::after {
+            border-left-color: rgba($dgr, 0.9);
+        }
+    }
+}
+.popover-header:empty {
+    display: none;
+}
+.popover-body {
+    padding: 12px 15px 13px;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.upload-photo {
+    padding: 8px 0 14px;
+    &-title {
+        margin-bottom: 10px;
+        .hint {
+            margin: 2px 0;
+        }
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+    }
+    &-item {
+        flex: 0 0 50px;
+        max-width: 50px;
+        height: 50px;
+        overflow: hidden;
+        margin: 0 0 10px 10px;
+        position: relative;
+        background: $s;
+        img {
+            width: 100%;
+        }
+        &.loading {
+            pointer-events: none;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: $s;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -9px 0 0 -9px;
+                width: 18px;
+                height: 18px;
+                background: $tr url('../upload/loader.png') 50% 50% no-repeat;
+                background-size: 100% 100%;
+                animation: rotation 0.8s infinite linear;
+            }
+        }
+        &.delete {
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba($t, 0.6) url('../upload/close.svg') 50% 50% no-repeat;
+                background-size: 36px 36px;
+            }
+        }
+    }
+    &-input {
+        flex: 0 0 50px;
+        max-width: 50px;
+        margin: 0 0 10px 10px;
+        input {
+            display: none !important;
+        }
+        label {
+            cursor: pointer;
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            margin: 0;
+            background: $s;
+            overflow: hidden;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 20px;
+                top: 24px;
+                width: 10px;
+                height: 2px;
+                background: $t;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 24px;
+                top: 20px;
+                width: 2px;
+                height: 10px;
+                background: $t;
+            }
+        }
+    }
+}

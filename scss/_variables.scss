@@ -1,0 +1,37 @@
+$screen: 420px;
+
+$fontSize: 13px;
+$lineHeight: 1.385;
+$spacer: 18px;                                                    $sp: $spacer;
+$fontFamily: 'Gotham Pro', Helvetica, Arial, sans-serif;          $ff: $fontFamily;
+
+
+$duration: 0.15s;                                                 $d: $duration;
+$function: cubic-bezier(0.4, 0.0, 0.2, 1);                        $f: $function;
+$function-reverse: cubic-bezier(0.2, 0.0, 0.4, 1);                $fr: $function-reverse;
+
+
+$primary: #83C150;                                                $p: $primary;
+$secondary: #F4F5F6;                                              $s: $secondary;
+$tertiary: #a1a1a1;                                               $t: $tertiary;
+
+
+$text: #393939;                                                   $txt: $text;
+$link: #83C150;                                                   $l: $link;
+
+
+$white: #ffffff;                                                  $w: $white;
+$black: #000000;                                                  $b: $black;
+$dark-gray: #393939;                                              $dgr: $dark-gray;
+$gray: #686868;                                                   $gr: $gray;
+$light-gray: #eaeaea;                                             $lgr: $light-gray;
+$green: #83C150;                                                  $gn: $green;
+$red: #F30000;                                                    $r: $red;
+$transparent: transparent;                                        $tr: $transparent;
+
+
+$default: #f00;
+$success: #83C150;
+$info: #7396D1;
+$warning: #F3B800;
+$error: #F30000;

@@ -1,0 +1,35 @@
+.country {
+    &-list {
+        padding-bottom: 8px;
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        padding: 18px;
+        margin-bottom: 8px;
+        border-radius: 3px;
+        border: 1px solid #e1e1e1;
+        transition: border-color $d $f, box-shadow $d $f;
+        will-change: border-color, box-shadow;
+        &.active {
+            border-color: $t;
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15), inset 0 0 0 1px $t;
+        }
+    }
+    &-img {
+        flex: 0 0 44px;
+        max-width: 44px;
+        img {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+        }
+    }
+    &-title {
+        flex-grow: 1;
+        padding-left: 21px;
+        padding-top: 2px;
+        font-weight: 500;
+        color: $text;
+    }
+}

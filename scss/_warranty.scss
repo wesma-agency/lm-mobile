@@ -1,0 +1,224 @@
+.warranty {
+    padding-bottom: 10px;
+    &-content {
+        padding-top: 3px;
+        text-align: center;
+        & > p {
+            margin-bottom: 18px;
+            strong {
+                line-height: normal;
+                font-weight: 500;
+                color: $b;
+            }
+            a {
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
+    &-item {
+        padding: 11px 0 21px;
+        & + .warranty-subtitle {
+            padding-top: 5px;
+        }
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 105px;
+            height: 105px;
+            margin: 0 auto 17px;
+            background: $s;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-info {
+            p {
+                margin-bottom: 18px;
+            }
+        }
+        &-title {
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 6px;
+        }
+    }
+    &-title {
+        font-size: 15px;
+        line-height: 1.3334;
+        font-weight: 500;
+        color: $b;
+        letter-spacing: -0.3px;
+        margin-bottom: 16px;
+        & + p {
+            padding-top: 3px;
+        }
+    }
+    &-subtitle {
+        font-weight: 500;
+        color: $b;
+        margin-bottom: 19px;
+        &-v2 {
+            padding-top: 21px;
+            margin-bottom: 16px;
+        }
+    }
+    &-data {
+        margin: 0 -16px 31px;
+        padding: 21px 16px 20px;
+        background: $s;
+        &-list {
+            display: block;
+            margin: 0 0 19px;
+            padding: 0;
+            list-style: none;
+            li {
+                text-align: left;
+                line-height: 1.85;
+                position: relative;
+                padding-left: 37px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 14px;
+                    top: 10px;
+                    width: 3px;
+                    height: 3px;
+                    background: $text;
+                    border-radius: 50%;
+                }
+            }
+        }
+        &-note {
+            margin: 0 -16px;
+            padding: 27px 16px 10px;
+            border-top: 1px solid #e1e1e1;
+            p {
+                max-width: 240px;
+                margin: 0 auto;
+                font-size: 11px;
+                line-height: 1.455;
+                color: $gray;
+            }
+        }
+        &-attention {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            padding-bottom: 4px;
+            margin: 0 auto 13px;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+            background: $w;
+            border-radius: 50%;
+        }
+        &-title {
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 3px;
+        }
+    }
+    &-sep {
+        margin: 0 -16px 30px;
+        height: 12px;
+        border-bottom: 1px solid #e1e1e1;
+        font-size: 0;
+        line-height: 0;
+    }
+    &-list {
+        display: block;
+        margin: 0;
+        padding: 15px 0 0;
+        list-style: none;
+        li {
+            position: relative;
+            padding: 0 18px 36px 58px;
+            text-align: left;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 26px;
+                left: 25px;
+                bottom: 10px;
+                width: 0;
+                border-left: 2px dotted #d7d7d7;
+            }
+            &:last-child {
+                &::before {
+                    display: none;
+                }
+            }
+            a,
+            strong {
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+        &-step {
+            position: absolute;
+            left: 13px;
+            top: -3px;
+            width: 24px;
+            height: 24px;
+            padding-top: 1px;
+            font-size: 11px;
+            line-height: 1.455;
+            font-weight: 500;
+            color: $b;
+            text-align: center;
+            white-space: nowrap;
+            border: 3px solid $p;
+            background: $w;
+            border-radius: 50%;
+        }
+        &-note {
+            display: block;
+            font-weight: 500;
+            padding-top: 17px;
+        }
+        & + .warranty-sep {
+            margin-top: -5px;
+            height: 0;
+        }
+        &-v2 {
+            padding-bottom: 16px;
+            li {
+                padding-bottom: 18px;
+            }
+        }
+    }
+    &-download {
+        padding: 0 19px 19px;
+        &-link {
+            display: flex;
+            align-items: center;
+        }
+        &-icon {
+            flex: 0 0 51px;
+            max-width: 51px;
+            padding-right: 21px;
+            padding-bottom: 2px;
+            img {
+                width: 100%;
+            }
+        }
+        &-info {
+            flex-grow: 1;
+            text-align: left;
+        }
+        &-title {
+            display: block;
+            line-height: 1.231;
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 2px;
+        }
+        &-subtitle {
+            display: block;
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gray;
+        }
+    }
+}

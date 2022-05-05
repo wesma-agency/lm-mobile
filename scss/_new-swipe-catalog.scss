@@ -1,0 +1,29 @@
+.catalog-product-slider {
+    margin-bottom: 8px;
+    &.swiper-container {
+        & .swiper-pagination {
+            bottom: 6px;
+            & .swiper-pagination-bullet {
+                width: 4px;
+                height: 4px;
+                margin: 2px;
+                &.swiper-pagination-bullet-active {
+                    width: 4px;
+                }
+            }
+        }
+    }
+}
+
+.swiper-container {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+
+.catalog-product-slider-img {
+    & img {
+        width: 100%;
+    }
+}

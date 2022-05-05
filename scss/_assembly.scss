@@ -1,0 +1,84 @@
+.assembly {
+    &-city {
+        margin-bottom: 16px;
+    }
+    &-price {
+        &-list {
+            padding-bottom: 40px;
+            margin: 0 -16px;
+            overflow: hidden;
+            table {
+                width: 100%;
+                border-spacing: 0;
+                box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+                th {
+                    padding: 5px 16px 9px 0;
+                    font-size: 11px;
+                    line-height: 1.455;
+                    font-weight: normal;
+                    color: $gray;
+                    text-align: right;
+                    &:first-child {
+                        text-align: left;
+                        padding-left: 16px;
+                    }
+                }
+                td {
+                    padding: 22px 16px 22px 0;
+                    text-align: right;
+                    font-size: 11px;
+                    line-height: 1.455;
+                    font-weight: 500;
+                    color: $b;
+                    border-top: 1px solid #e3e3e3;
+                    &:first-child {
+                        width: 68px;
+                        padding-right: 12px;
+                        padding-left: 16px;
+                    }
+                }
+            }
+        }
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+        &-category {
+            font-weight: normal;
+            color: $text;
+            text-align: left;
+        }
+    }
+    &-features {
+        margin-bottom: 16px;
+    }
+    &-feature {
+        padding-bottom: 30px;
+        text-align: center;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 105px;
+            height: 105px;
+            margin: 0 auto 21px;
+            background: $s;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-title {
+            font-size: 15px;
+            line-height: 1.2;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            color: $b;
+            margin-bottom: 10px;
+        }
+        &-info {
+            margin-bottom: 9px;
+        }
+    }
+}

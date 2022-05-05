@@ -1,0 +1,26 @@
+.dealers {
+    &-item {
+        padding-bottom: 12px;
+    }
+    &-img {
+        margin-bottom: 21px;
+        img {
+            width: 100%;
+        }
+    }
+    &-info {
+        text-align: center;
+        padding: 0 20px;
+        p {
+            margin-bottom: 17px;
+        }
+    }
+    &-title {
+        font-size: 15px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: $b;
+        letter-spacing: -0.3px;
+        margin-bottom: 15px;
+    }
+}

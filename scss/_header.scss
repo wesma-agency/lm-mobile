@@ -1,0 +1,1211 @@
+/* header */
+.header {
+    &-global {
+        border-bottom: 1px solid #E3E3E3;
+    }
+    &-shadow {
+        border-bottom: 0;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    }
+    &-content {
+        padding: 8px 0;
+        margin: 0 -8px;
+        display: flex;
+        align-items: flex-start;
+    }
+    &-phone {
+        &-link {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: $tr url('../upload/phone.svg') 50% 50% no-repeat;
+            background-size: 22px 22px;
+        }
+    }
+    &-favorite,
+    &-cart,
+    &-profile {
+        &-link {
+            display: block;
+            width: 40px;
+            height: 40px;
+            position: relative;
+        }
+        &-number {
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            min-width: 20px;
+            height: 20px;
+            padding: 4px 3px 3px;
+            font-size: 9px;
+            line-height: 1;
+            font-weight: 500;
+            color: $w;
+            text-align: center;
+            white-space: nowrap;
+            border: 2px solid $w;
+            border-radius: 50%;
+            background: $p;
+        }
+    }
+    &-favorite {
+        &-link {
+            background: $tr url('../upload/favorite.svg') 50% 50% no-repeat;
+            background-size: 22px 20px;
+        }
+    }
+    &-cart {
+        &-link {
+            background: $tr url('../upload/cart.svg') 50% 50% no-repeat;
+            background-size: 25px 24px;
+        }
+    }
+    &-profile {
+        &-link {
+            background: $tr url('../upload/profile.svg') 50% 50% no-repeat;
+            background-size: 40px 40px;
+        }
+    }
+    &-fix {
+        flex: 0 0 40px;
+        max-width: 40px;
+        min-height: 1px;
+    }
+}
+.logo {
+    flex-grow: 1;
+    padding-top: 4px;
+    a {
+        display: block;
+        padding: 10px;
+        max-width: 128px;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+    }
+}
+.navigation-toggle {
+    display: block;
+    position: relative;
+    flex: 0 0 40px;
+    max-width: 40px;
+    height: 40px;
+}
+.navigation-toggle-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background: #7F7F7F;
+    transform: translate3d(0, -50%, 0);
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: #7F7F7F;
+        transform: translate3d(0, -7px, 0);
+    }
+    &:after {
+        transform: translate3d(0, 7px, 0);
+    }
+}
+.navigation {
+    position: fixed;
+    z-index: 5100;
+    top: 0;
+    left: 0;
+    width: calc(100% - 56px);
+    height: 100%;
+    background: $w;
+    transform: translateX(-101%);
+    transition: transform $d*2 $f;
+    will-change: transform;
+    &-mask {
+        position: fixed;
+        z-index: 5000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($b, 0.8);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity $d*2 $f, visibility $d*2 $f;
+        will-change: opacity, visibility;
+    }
+    &-close {
+        display: block;
+        position: fixed;
+        z-index: 5050;
+        top: 8px;
+        right: 8px;
+        width: 40px;
+        height: 40px;
+        background: $tr url('../upload/close.svg') 50% 50% no-repeat;
+        background-size: 100% 100%;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity $d*2 $f, visibility $d*2 $f;
+        will-change: opacity, visibility;
+    }
+    &-content {
+        height: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-scrollbar-track {
+            background: $tr;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $tr;
+            outline: none;
+        }
+        &::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        &::-webkit-scrollbar-corner {
+            background: $tr;
+        }
+    }
+    &-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+        padding: 8px 16px 8px 8px;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    &-phone {
+        flex: 0 0 100%;
+        max-width: 100%;
+        &-link {
+            display: block;
+            padding: 8px 0 8px 40px;
+            font-size: 15px;
+            line-height: 1.6;
+            font-weight: 500;
+            white-space: nowrap;
+            color: $b;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 40px;
+                height: 40px;
+                background: $tr url('../upload/phone.svg') 50% 50% no-repeat;
+                background-size: 22px 22px;
+            }
+        }
+    }
+    &-city {
+        padding-left: 8px;
+        &-link {
+            display: block;
+            padding: 4px 0;
+            line-height: 1;
+            font-weight: 500;
+            span {
+                border-bottom: 1px dashed $p;
+            }
+        }
+    }
+    &-worktime {
+        padding-left: 8px;
+        padding-top: 2px;
+    }
+    &-menu {
+        &-tabs {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.10);
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            overflow-scrolling: touch;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+            &::-webkit-scrollbar-track {
+                background: $tr;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $tr;
+                outline: none;
+            }
+            &::-webkit-scrollbar-button {
+                width: 0;
+                height: 0;
+                display: none;
+            }
+            &::-webkit-scrollbar-corner {
+                background: $tr;
+            }
+            li {
+                padding: 0 16px;
+                a {
+                    display: block;
+                    padding: 16px 0 15px;
+                    font-size: 15px;
+                    line-height: 1.4;
+                    color: $text;
+                    white-space: nowrap;
+                    border-bottom: 2px solid $tr;
+                    transition: color $d $f, border-color $d $f;
+                    will-change: color, border-color;
+                }
+                &.active {
+                    a {
+                        color: $b;
+                        font-weight: 500;
+                        border-bottom-color: $p;
+                    }
+                }
+            }
+        }
+        &-list {
+            display: block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                border-bottom: 1px solid #e3e3e3;
+            }
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            padding: 7px 16px 7px 8px;
+        }
+        &-toggle {
+            padding-right: 40px;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                margin-top: -4px;
+                right: 18px;
+                width: 12px;
+                height: 8px;
+                background: $tr url('../upload/arrow-down.svg') 50% 50% no-repeat;
+                background-size: 100% 100%;
+                transform: rotate(-90deg);
+            }
+        }
+        &-img {
+            flex: 0 0 48px;
+            max-width: 48px;
+            padding-right: 8px;
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+            }
+        }
+        &-title {
+            flex-grow: 1;
+            font-size: 15px;
+            line-height: 1.4;
+            font-weight: 500;
+            color: $b;
+        }
+        &-sale {
+            color: $p;
+        }
+    }
+    &-search {
+        position: relative;
+        &-text {
+            display: block;
+            width: 100%;
+            height: 57px;
+            font-size: 16px;
+            line-height: normal;
+            color: $b;
+            padding: 5px 16px 5px 56px;
+            border: 0;
+            border-bottom: 1px solid #e3e3e3;
+            border-radius: 0;
+            background: $tr;
+            &::placeholder {
+                color: $text;
+            }
+        }
+        &-button {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 0;
+            font-size: 0;
+            line-height: 0;
+            width: 56px;
+            height: 56px;
+            background: $tr url('../upload/search.svg') 50% 50% no-repeat;
+            background-size: 20px 20px;
+            border: 0;
+            border-radius: 0;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &-cabinet {
+        padding: 16px 16px 0;
+        .button {
+            width: 100%;
+        }
+    }
+    &-info {
+        display: block;
+        margin: 0;
+        padding: 17px 0 22px;
+        list-style: none;
+        border-bottom: 1px solid #e3e3e3;
+        li {
+            a {
+                display: block;
+                padding: 6px 16px;
+                color: $text;
+            }
+        }
+    }
+    &-footer {
+        padding: 7px 16px 18px;
+    }
+    &-logo {
+        margin: 0 -10px 4px;
+        a {
+            display: block;
+            padding: 10px;
+            max-width: 128px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &-copyright {
+        margin-bottom: 12px;
+        font-size: 11px;
+        color: $gray;
+    }
+    &-social {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px 6px -4px;
+        padding: 0;
+        list-style: none;
+        li {
+            padding: 4px 5px 4px 4px;
+            a {
+                display: block;
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                background: #E1E1E1;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-version {
+        font-weight: 500;
+        a {
+            display: block;
+            padding: 5px 0;
+        }
+    }
+    &-panel {
+        position: absolute;
+        z-index: 5200;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $w;
+        transform: translateX(-101%);
+        transition: transform $d*2 $f;
+        will-change: transform;
+        &.show {
+            transform: translateX(0);
+        }
+        &-content {
+            height: 100%;
+            max-height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            overflow-scrolling: touch;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+            &::-webkit-scrollbar-track {
+                background: $tr;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $tr;
+                outline: none;
+            }
+            &::-webkit-scrollbar-button {
+                width: 0;
+                height: 0;
+                display: none;
+            }
+            &::-webkit-scrollbar-corner {
+                background: $tr;
+            }
+        }
+        &-back {
+            display: block;
+            padding: 17px 16px 18px 40px;
+            font-size: 15px;
+            line-height: 1.4;
+            font-weight: 500;
+            color: $b;
+            background: $s;
+            border-bottom: 1px solid #e3e3e3;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                margin-top: -4px;
+                left: 13px;
+                width: 12px;
+                height: 8px;
+                background: $tr url('../upload/arrow-down-black.svg') 50% 50% no-repeat;
+                background-size: 100% 100%;
+                transform: rotate(90deg);
+            }
+        }
+        &-list {
+            display: block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            & > li {
+                border-bottom: 1px solid #e3e3e3;
+                &.open {
+                    & > a {
+                        &.navigation-panel-toggle {
+                            &:after {
+                                transform: rotate(-180deg);
+                            }
+                        }
+                    }
+                }
+                & > a {
+                    display: block;
+                    padding: 13px 16px 14px;
+                    font-size: 15px;
+                    line-height: 1.4;
+                    font-weight: 500;
+                    color: $b;
+                    &.navigation-panel-sale {
+                        color: $p;
+                    }
+                    &.navigation-panel-toggle {
+                        padding-right: 40px;
+                        position: relative;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            margin-top: -3px;
+                            right: 19px;
+                            width: 12px;
+                            height: 8px;
+                            background: $tr url('../upload/arrow-down.svg') 50% 50% no-repeat;
+                            background-size: 100% 100%;
+                            transition: transform $d $f;
+                            will-change: transform;
+                        }
+                    }
+                }
+                & > ul {
+                    display: block;
+                    margin: 0;
+                    padding: 0 0 6px;
+                    list-style: none;
+                    transform: translateY(-7px);
+                    &.navigation-panel-list-inner {
+                        display: none;
+                    }
+                    & > li {
+                        & > a {
+                            display: block;
+                            padding: 6px 16px 6px 40px;
+                            color: $text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.navigation-show {
+    body {
+        touch-action: none;
+        -webkit-overflow-scrolling: none;
+        overflow: hidden;
+        overscroll-behavior: none;
+    }
+    .navigation-mask,
+    .navigation-close {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .navigation {
+        transform: translateX(0);
+    }
+}
+.city-panel {
+    position: fixed;
+    z-index: 4100;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 56px);
+    background: $w;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity $d*2 $f, visibility $d*2 $f;
+    will-change: opacity, visibility;
+    &-mask {
+        position: fixed;
+        z-index: 4000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($b, 0.7);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity $d*2 $f, visibility $d*2 $f;
+        will-change: opacity, visibility;
+    }
+    &-content {
+        height: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-scrollbar-track {
+            background: $tr;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $tr;
+            outline: none;
+        }
+        &::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        &::-webkit-scrollbar-corner {
+            background: $tr;
+        }
+    }
+    &-caption {
+        padding: 16px;
+        background: $s;
+    }
+    &-title {
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: 900;
+        color: $b;
+        padding: 0 34px 16px 0;
+        position: relative;
+    }
+    &-close {
+        display: block;
+        position: absolute;
+        z-index: 4150;
+        top: -8px;
+        right: -12px;
+        width: 40px;
+        height: 40px;
+        background: $tr url('../upload/close-black.svg') 50% 50% no-repeat;
+        background-size: 100% 100%;
+    }
+    &-input {
+        position: relative;
+        .input-text {
+            padding-right: 39px;
+        }
+        &-clear {
+            display: block;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 16px;
+            height: 16px;
+            background: #c1c5c7 url('../upload/close2.svg') 50% 50% no-repeat;
+            background-size: 8px 8px;
+            border-radius: 50%;
+            &::before {
+                content: "";
+                position: absolute;
+                left: -12px;
+                top: -12px;
+                right: -12px;
+                bottom: -12px;
+            }
+        }
+    }
+    &-select {
+        display: block;
+        margin: 0;
+        padding: 17px 0 15px;
+        list-style: none;
+        li {
+            a {
+                display: block;
+                padding: 7px 50px 9px 16px;
+                line-height: normal;
+                color: $text;
+                position: relative;
+                transition: color $d $f, background-color $d $f;
+                will-change: color, background-color;
+                &::after {
+                    opacity: 0;
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -7px;
+                    right: 24px;
+                    width: 13px;
+                    height: 13px;
+                    background: $tr url('../upload/check2.svg') 50% 50% no-repeat;
+                    background-size: 100% 100%;
+                    transition: opacity $d $f;
+                    will-change: opacity;
+                }
+            }
+            &.active {
+                a {
+                    font-weight: 500;
+                    color: $b;
+                    background-color: $s;
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &-note {
+        border-top: 1px solid #e1e1e1;
+        padding: 12px 16px 19px;
+        font-size: 11px;
+        line-height: 1.455;
+        color: $gray;
+        p {
+            margin: 0;
+            max-width: 230px;
+        }
+    }
+}
+.city-panel-show {
+    body {
+        touch-action: none;
+        -webkit-overflow-scrolling: none;
+        overflow: hidden;
+        overscroll-behavior: none;
+    }
+    .city-panel,
+    .city-panel-mask {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+.profile-panel {
+    position: fixed;
+    z-index: 4100;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 56px);
+    background: $w;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity $d*2 $f, visibility $d*2 $f;
+    will-change: opacity, visibility;
+    &-mask {
+        position: fixed;
+        z-index: 4000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($b, 0.7);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity $d*2 $f, visibility $d*2 $f;
+        will-change: opacity, visibility;
+    }
+    &-content {
+        height: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-scrollbar-track {
+            background: $tr;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $tr;
+            outline: none;
+        }
+        &::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        &::-webkit-scrollbar-corner {
+            background: $tr;
+        }
+    }
+    &-title {
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: 900;
+        color: $b;
+        padding: 16px 50px 15px 16px;
+        border-bottom: 1px solid #e3e3e3;
+        position: relative;
+    }
+    &-close {
+        display: block;
+        position: absolute;
+        z-index: 4150;
+        top: 8px;
+        right: 4px;
+        width: 40px;
+        height: 40px;
+        background: $tr url('../upload/close-black.svg') 50% 50% no-repeat;
+        background-size: 100% 100%;
+    }
+    &-tab {
+        padding: 16px;
+    }
+    &-tabs {
+        display: flex;
+        margin: 0 -16px 22px;
+        padding: 0 1px;
+        list-style: none;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-scrollbar-track {
+            background: $tr;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $tr;
+            outline: none;
+        }
+        &::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        &::-webkit-scrollbar-corner {
+            background: $tr;
+        }
+        li {
+            padding: 0 15px;
+            a {
+                display: block;
+                padding: 9px 0 5px;
+                font-size: 15px;
+                line-height: 1.4;
+                font-weight: 500;
+                color: $t;
+                white-space: nowrap;
+                border-bottom: 2px solid $tr;
+                transition: color $d $f, border-color $d $f;
+                will-change: color, border-color;
+            }
+            &.active {
+                a {
+                    color: $b;
+                    border-bottom-color: $p;
+                }
+            }
+        }
+    }
+    &-register {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        min-height: calc(100vh - 203px);
+        &-form {
+            flex: 1 0 auto;
+            max-width: 100%;
+        }
+        &-options {
+            flex: 0 0 auto;
+            max-width: 100%;
+            padding-top: 30px;
+            .button {
+                width: 100%;
+            }
+        }
+        &-terms {
+            padding: 16px 0 8px;
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gr;
+            text-align: center;
+            p {
+                margin-bottom: 0;
+            }
+            a {
+                font-weight: 500;
+            }
+        }
+    }
+    &-error {
+        position: absolute;
+        z-index: 4200;
+        left: 0;
+        right: 0;
+        top: -56px;
+        padding: 20px 16px;
+        text-align: center;
+        background: $red;
+        color: $w;
+        font-size: 13px;
+        line-height: 1.231;
+        font-weight: 500;
+    }
+    &-login {
+        &-email {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            min-height: calc(100vh - 203px);
+        }
+        &-form {
+            flex: 1 0 auto;
+            max-width: 100%;
+            .input-wrapper {
+                position: relative;
+            }
+        }
+        &-options {
+            flex: 0 0 auto;
+            max-width: 100%;
+            padding-top: 30px;
+            .button {
+                width: 100%;
+            }
+        }
+        &-sep {
+            margin-bottom: 31px;
+            text-align: center;
+            line-height: 1.31;
+            border-bottom: 1px solid #e1e1e1;
+            span {
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                top: 8px;
+                padding: 0 12px;
+                font-weight: 500;
+                color: $b;
+                background: $w;
+            }
+        }
+        &-title {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        &-types {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -4px;
+            img {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 8px;
+            }
+        }
+        &-type {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 4px 8px;
+            &-x2 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding: 0 4px 8px;
+            }
+        }
+        &-apple,
+        &-google,
+        &-phone-link,
+        &-email-link {
+            display: block;
+            padding: 10px 16px 12px;
+            font-weight: 500;
+            color: $w;
+            text-align: center;
+            background: $b;
+            border-radius: 3px;
+        }
+        &-google,
+        &-phone-link,
+        &-email-link {
+            color: $b;
+            background: $s;
+            img {
+                margin-top: 2px;
+            }
+        }
+        &-phone-link {
+            img {
+                margin-top: 1px;
+                margin-right: 10px;
+            }
+        }
+        &-email-link {
+            img {
+                margin-top: 3px;
+                margin-right: 10px;
+            }
+        }
+        &-phone {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            min-height: calc(100vh - 203px);
+        }
+    }
+    &-forgot-password {
+        display: block;
+        position: absolute;
+        top: -11px;
+        right: -10px;
+        padding: 10px;
+        text-align: right;
+        font-weight: 500;
+    }
+    &-code {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 16px;
+        min-height: calc(100% - 56px);
+        .input-text-value {
+            border-color: $p;
+        }
+        &-content {
+            flex: 1 0 auto;
+            max-width: 100%;
+        }
+        &-title {
+            padding: 9px 0 31px;
+            strong {
+                font-weight: 500;
+                color: $b;
+                line-height: normal;
+            }
+        }
+        &-row {
+            display: flex;
+            margin: 0 -5px;
+        }
+        &-col {
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding: 0 5px;
+        }
+        &-note {
+            margin: -8px 0 10px;
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gr;
+        }
+        &-options {
+            flex: 0 0 auto;
+            max-width: 100%;
+            padding-top: 30px;
+            .button {
+                width: 100%;
+                margin-bottom: 12px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &-recover {
+        &-step {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: 16px;
+            min-height: calc(100% - 56px);
+        }
+        &-content {
+            flex: 1 0 auto;
+            max-width: 100%;
+        }
+        &-note {
+            padding: 9px 0 31px;
+        }
+        &-title {
+            padding: 11px 0 29px;
+            font-size: 15px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: $b;
+            & + .profile-panel-recover-note {
+                margin-top: -31px;
+            }
+        }
+        &-options {
+            flex: 0 0 auto;
+            max-width: 100%;
+            padding-top: 30px;
+            .button {
+                width: 100%;
+                margin-bottom: 12px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+.profile-panel-show {
+    body {
+        touch-action: none;
+        -webkit-overflow-scrolling: none;
+        overflow: hidden;
+        overscroll-behavior: none;
+    }
+    .profile-panel,
+    .profile-panel-mask {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+@media (min-width: $screen) {
+    .header {
+        &-content {
+            padding-top: 14px;
+            padding-bottom: 14px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &-phone {
+            &-link {
+                width: 48px;
+                height: 48px;
+                background-size: 26px 26px;
+            }
+        }
+        &-favorite,
+        &-cart,
+        &-profile {
+            &-link {
+                width: 48px;
+                height: 48px;
+            }
+        }
+        &-favorite {
+            &-link {
+                background-size: 26px 24px;
+            }
+        }
+        &-cart {
+            &-link {
+                background-size: 30px 29px;
+            }
+        }
+        &-profile {
+            &-link {
+                background-size: 48px 48px;
+            }
+        }
+        &-fix {
+            flex: 0 0 48px;
+            max-width: 48px;
+        }
+    }
+    .logo {
+        a {
+            max-width: 180px;
+        }
+    }
+    .navigation-toggle {
+        flex: 0 0 48px;
+        max-width: 48px;
+        height: 48px;
+    }
+    .navigation-toggle-icon {
+        left: 12px;
+        right: 12px;
+        height: 3px;
+        &:before {
+            transform: translate3d(0, -8px, 0)
+        }
+        &:after {
+            transform: translate3d(0, 8px, 0)
+        }
+    }
+}

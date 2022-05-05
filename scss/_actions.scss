@@ -1,0 +1,53 @@
+.actions {
+    &-list {
+        margin-bottom: 16px;
+    }
+    &-more {
+        padding: 0 16px 16px;
+        &-button {
+            display: block;
+            text-align: center;
+            font-weight: 500;
+            padding: 10px 0 12px;
+        }
+    }
+}
+.action {
+    &-link {
+        display: flex;
+        background: $s;
+    }
+    &-img {
+        flex: 0 0 50%;
+        max-width: 50%;
+        img {
+            width: 100%;
+        }
+    }
+    &-info {
+        flex: 0 0 50%;
+        max-width: 50%;
+        align-self: flex-end;
+        padding: 16px 16px 24px 24px;
+    }
+    &-period {
+        display: block;
+        font-size: 11px;
+        line-height: 1.273;
+        color: $gr;
+        margin-bottom: 8px;
+    }
+    &-title {
+        display: block;
+        font-size: 13px;
+        line-height: 1.231;
+        font-weight: 500;
+        color: $b;
+        letter-spacing: -0.09px;
+    }
+    &-inverse {
+        .action-img {
+            order: 2;
+        }
+    }
+}

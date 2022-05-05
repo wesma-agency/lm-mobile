@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="32px" viewBox="0 0 48 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons-/-mebel-/-obed-stol" transform="translate(-16.000000, -24.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M18,24 L18,40 L26,40 L26,33 L22,33 C21.3790902,33 21,32.6229893 21,32 L21,28 C21,27.3770107 21.3790902,27 22,27 L58,27 C58.6209098,27 59,27.3770107 59,28 L59,32 C59,32.6229893 58.6209098,33 58,33 L54,33 L54,40 L62,40 L62,24 L64,24 L64,56 L62.0778809,56 L62,42.0029297 L54,42.002 L54,56 L52,56 L52,42.002 L48.9812012,42.0029297 L48.9812012,56 L47.0273437,56 L47.0273437,40.839 C47.0273437,40.376 47.4023437,40 47.8663437,40 L47.8663437,40 L52,40 L52,36.959 L28,36.959 L28,40 L32.1394872,40 C32.5836581,40 32.9483123,40.6763513 32.9949587,41.1478412 L33,41.245418 L33,56 L31.0092773,56 L31.0092773,42.0952803 L28,42.073 L28,56 L26,56 L26,42.058 L18,42 L18,56 L16,56 L16,24 L18,24 Z M52,33 L28,33 L28,35.041 L52,35.041 L52,33 Z M57,29 L23,29 L23,31 L57,31 L57,29 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>
